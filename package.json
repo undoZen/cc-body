@@ -1,0 +1,31 @@
+{
+  "name": "cc-body",
+  "version": "0.0.0",
+  "description": "可以接受 GBK 编码的 body parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/cases/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/undoZen/cc-body.git"
+  },
+  "keywords": [
+    "body",
+    "body-parser"
+  ],
+  "author": "undoZen <undozen@creditcloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.5.4",
+    "co-body": "^2.0.0",
+    "conext": "^1.0.0",
+    "media-typer": "^0.3.0"
+  },
+  "devDependencies": {
+    "concat-stream": "^1.5.0",
+    "express": "^4.12.4",
+    "iconv-lite": "^0.4.10",
+    "tape": "^4.0.0"
+  }
+}
