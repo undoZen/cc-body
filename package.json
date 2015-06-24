@@ -1,6 +1,6 @@
 {
   "name": "cc-body",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "可以接受 GBK 编码的 body parser",
   "main": "index.js",
   "scripts": {
