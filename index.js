@@ -8,9 +8,10 @@ var typer = require('media-typer');
 
 function getParser(type) {
     var parse = type ? coBody[type] : coBody;
-    return conext(function *(req, res, next) {
+    return conext(function *(req, res) {
+        console.log('=====');
         if (req._body) {
-            return next();
+            return 'next';
         }
         req._body = true;
         var contentType = req.headers['content-type'];
@@ -18,7 +19,6 @@ function getParser(type) {
         req.body = yield parse(req, {
             encoding: charset,
         });
-        next();
     });
 }
 
