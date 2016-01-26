@@ -1,7 +1,9 @@
 'use strict';
-var co = require('co');
 var conext = require('conext');
-var coBody = require('co-body');
+var coBody = require('./lib/any');
+coBody.json = require('./lib/json');
+coBody.form = require('./lib/form');
+coBody.text = require('./lib/text');
 var typer = require('media-typer');
 
 function getParser(type) {
@@ -14,7 +16,7 @@ function getParser(type) {
         var contentType = req.headers['content-type'];
         var charset = typer.parse(contentType).parameters.charset;
         req.body = yield parse(req, {
-            encoding: charset
+            encoding: charset,
         });
         next();
     });

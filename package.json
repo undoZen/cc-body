@@ -17,10 +17,11 @@
   "author": "undoZen <undozen@creditcloud.com>",
   "license": "MIT",
   "dependencies": {
-    "co": "^4.5.4",
-    "co-body": "^2.0.0",
-    "conext": "^1.0.0",
-    "media-typer": "^0.3.0"
+    "conext": "^3.1.0",
+    "media-typer": "^0.3.0",
+    "qs": "~4.0.0",
+    "raw-body": "~2.1.2",
+    "type-is": "~1.6.6"
   },
   "devDependencies": {
     "concat-stream": "^1.5.0",
