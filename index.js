@@ -9,18 +9,15 @@ var typer = require('media-typer');
 function getParser(type) {
     var parse = type ? coBody[type] : coBody;
     return conext(function *(req, res) {
-        console.log('=====');
         if (req._body) {
             return 'next';
         }
         req._body = true;
         var contentType = req.headers['content-type'];
-        var charset;
+        var charset = 'utf-8';
         try {
             charset = typer.parse(contentType).parameters.charset;
-        } catch (e) {
-            charset = 'utf-8';
-        }
+        } catch (e) {}
         req.body = yield parse(req, {
             encoding: charset,
         });
