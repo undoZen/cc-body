@@ -15,7 +15,12 @@ function getParser(type) {
         }
         req._body = true;
         var contentType = req.headers['content-type'];
-        var charset = typer.parse(contentType).parameters.charset;
+        var charset;
+        try {
+            charset = typer.parse(contentType).parameters.charset;
+        } catch (e) {
+            charset = 'utf-8';
+        }
         req.body = yield parse(req, {
             encoding: charset,
         });
