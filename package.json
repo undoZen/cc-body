@@ -17,7 +17,7 @@
   "author": "undoZen <undozen@creditcloud.com>",
   "license": "MIT",
   "dependencies": {
-    "conext": "^3.1.0",
+    "conext": "^4.0.0",
     "media-typer": "^0.3.0",
     "qs": "~4.0.0",
     "raw-body": "~2.1.2",
